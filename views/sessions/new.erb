@@ -1,0 +1,15 @@
+<% if session[:errors] %>
+	<p><%= session[:errors] %></p>
+	<% session[:errors] = nil %>
+<% end %>
+<form action="/sessions" method="post">
+	<p>
+		<label for="Email">Email</label>
+		<input id="Email" name="email" type="email">
+	</p>
+	<p>
+		<label for="password">Password</label>
+		<input id="password" name="password" type="password">
+	</p>
+	<input type="submit" value="Log In">
+</form>
